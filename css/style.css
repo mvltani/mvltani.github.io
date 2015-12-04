@@ -1,116 +1,48 @@
-/* 
-TheUltralinx.com - Dribbble Portfolio
-Last Updated: 2013-09-01
-Author: Chris Collins
-Twitter: @rchrisssycollins
-*/
-
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
-
-/* Basic Styles */
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Lato",  Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 500;
-  background: #efefef;
+body {
+	background-color: #e5dcd6;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",  "Lato", Helvetica, Arial, "Lucida Grande", sans-serif; 
+
+.content
+{
+	position: absolute;
+	max-width: 80%;
+	top: 10%;
+	left: 10%;
+	border-radius: 3px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 32px;
+	line-height: 46px;
+	color: #fff;
+
 }
 
-a, a:visited {
-  color: #000;
+
+a {
+	color: #F9F158;
+  background-color: transparent;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+
+
+.content:empty
+{
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
-/* Layout Styles */
 
-.logo {
-  border-radius: 999px;
-  margin: 40px;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-#main {
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  background: #fff;
-  color: #aaa;
-  padding: 20px 0;
-}
-
-/* Dribbble Feed Related */
-
-.shot, .shot-image {
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -ms-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-
-.dribbble-feed {
-  display: block;
-  text-align: center;
-  overflow: hidden;
-  margin: 0 0 40px 0;
-}
-
-.shot {
-  float: left;
-  margin:1.665%;
-  width: 28%;
-  -webkit-box-shadow:  0px 1px 2px 0px rgba(1, 1, 1, 0.1);
-  padding: 1%;
-  background: #fff;
-  box-shadow:  0px 1px 2px 0px rgba(1, 1, 1, 0.1);
-}
-
-.shot:hover {
-  -webkit-box-shadow:  0px 1px 2px 0px rgba(1, 1, 1, 0.2);
-  box-shadow:  0px 1px 2px 0px rgba(1, 1, 1, 0.2);
-}
-
-.shot-image {
-  width: 100%;
-}
-
-.shot-image:hover {
-  opacity: 0.7;
-}
-
-/* Media Queries */
-
-@media handheld, only screen and (max-width: 767px) {
-  .shot {
-    float: left;
-    margin:1.5%;
-    width: 45%;
+@media screen and (orientation: portrait) {
+  .content {
+      max-width: 80%;
   }
 }
 
-@media handheld, only screen and (max-width: 600px) {
-  .shot {
-    float: none;
-    margin:10% 1.5%;
-    width: 93%;
-    padding: 2%;
-  }
-}
-
-
+@media screen and (orientation: landscape) {
+  .content

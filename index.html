@@ -1,56 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Less and Better Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Page Style -->
-    <link href="css/style.css" rel="stylesheet" >
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="container">
-      <header id="main">
-        <a href="#" title="Less and Better"><img class="logo" alt="Dribbble Powered Folio by Less and Better" src="img/avatar.png"></img></a>
-      </header>
 
-    <section class="dribbble-feed">
-      <!--Dribbble feed-->
-    </section>
-  </div>
+<html>
+
+<head>
+	<title>Less and Better</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Poppins:500' rel='stylesheet' type='text/css'>
+
+	<style>
+::-moz-selection { /* Code for Firefox */
+    color: #E2CF47;
+    background: #FFFAE1;
+}
+
+::selection {
+    color: #E2CF47;
+    background: #FFFAE1;
+}
+</style>
+
+</head>
+
+
+
+<body>
+
+	<div class="wrapper">
+		<div class="content">
+
+
+
+
+<ul style="list-style-type:none">
+  <li>Imagine someone would offer you between 1 and 10.000 Dollar
+	with the goal to help as many people as you can.</li>
+</ul>
+
+<ul style="list-style-type:none">
+  <li>How much money would you take?</li>
+	<li>How many people could you help?</li>
+  <li>What would you do to achieve the goal?</li>
+</ul>
+
+<ul style="list-style-type:none">
+	<li>
+	<a href="http://www.twitter.com/lessandbetter">Let's connect to find out!</a></li>
+</ul>
+
+
+		</div>
+
+	</div>
+
+
 
 <footer>
-  <p>
-    Dribbble Powered Portfolio by <a href="http://www.twitter.com/lessandbetter">Less and Better</a> 
-  </p>
+
 </footer>
 
-    <!-- jQuery  -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <!-- jRibbble -->
-    <script src="js/jquery.jribbble.js"></script>
-
-
-<script type="text/javascript">
-
-$('.dribbble-feed').hide();
-jQuery(window).load(function(){
-$('.dribbble-feed').fadeIn();
-});
-
-$(document).ready(function getDribbbleShots() {   
-  $.jribbble.getShotsByPlayerId('patrickmultani', function (playerShots) {
-      var html = [];
-      $.each(playerShots.shots, function (i, shot) {
-          html.push('<div class="shot"><a href="' + shot.url + '" target="_blank">');
-          html.push('<img class="shot-image" src="' + shot.image_url + '" ');
-          html.push('alt="' + shot.title + '"></a></div>');
-      });
-      $('.dribbble-feed').html(html.join(''));
-  }, {page: 1, per_page: 9});
-});
-</script>
-  </body>
+</body>
 
 </html>
